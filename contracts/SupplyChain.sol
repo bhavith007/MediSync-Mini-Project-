@@ -10,12 +10,6 @@ contract SupplyChain {
         Owner = msg.sender;
     }
 
-    //Roles (flow of pharma supply chain)
-    // RawMaterialSupplier; //This is where Manufacturer will get raw materials to make medicines
-    // Manufacturer;  //Various WHO guidelines should be followed by this person
-    // Distributor; //This guy distributes the medicines to retailers
-    // Retailer; //Normal customer buys from the retailer
-
     //modifier to make sure only the owner is using the function
     modifier onlyByOwner() {
         require(msg.sender == Owner);
